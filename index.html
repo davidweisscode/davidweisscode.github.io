@@ -2,6 +2,8 @@
 <head>
     <title>David Weiß Homepage</title>
     <noscript>Your browser does not support JavaScript.</noscript>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script.js"></script>
     <style>
         h1, h2, h3, h4, p {
             text-align: center;
@@ -9,11 +11,11 @@
         h1 {
             padding-top: 3%;
         }
-        img, object {
+        /*object {
             display: block;
             margin-left: auto;
             margin-right: auto;
-        }
+        }*/
         a:link {
             color: #000000;
             text-decoration: underline;
@@ -31,6 +33,38 @@
         }
         .menu {
             margin: 5px;
+        }
+        .img-container {
+            overflow: hidden;
+            position: relative; /* Without, w and h different? */
+            width: 50vw;
+            height: 50vh;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .img-container object {
+            object-fit: cover;
+            object-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: -1;
+        }
+        .img-container object.next {
+            opacity: 1;
+            z-index: 1;
+        }
+        .img-container object.prev {
+            opacity: 1;
+            z-index: 2;
+        }
+        .img-container object.fade-out {
+            opacity: 0;
+            transition: visibility 0s .5s, opacity .5s linear;
+            visibility: hidden;
         }
         .link-icons {
             text-align: center;
@@ -54,7 +88,15 @@
     <h1>David Weiß</h1>
 
     <!--<img src="placeholder.jpg" style="width:600px;height:400px;" alt="Alternate text, if the user cannot view the image.">-->
-    <object data="drawing.svg" style="width:600px;height:400px;">Your browser does not support SVG</object>
+    <div class="img-container" data-slideshow>
+        <object data="drawing-1.svg">Your browser does not support SVG</object>
+        <object data="drawing-2.svg">Your browser does not support SVG</object>
+        <object data="drawing-3.svg">Your browser does not support SVG</object>
+        <!--<img src="test-image-1.jpeg">
+        <img src="test-image-2.jpeg">
+        <img src="test-image-3.jpeg">-->
+    </div>
+    
     <h2>This will be a description.</h2>
 
     <div class="link-icons">
