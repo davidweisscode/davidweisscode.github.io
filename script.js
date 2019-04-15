@@ -88,4 +88,4 @@ function shuffleArray(array) {
 
 $(document).ready(function() {
     new Slideshow();
-})
+});

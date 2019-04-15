@@ -1,89 +1,10 @@
 <html>
 <head>
-    <title>David Weiß Homepage</title>
+    <title>David Weiß Home</title>
     <noscript>Your browser does not support JavaScript.</noscript>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="script.js"></script>
-    <style>
-        h1, h2, h3, h4, p {
-            text-align: center;
-        }
-        h1 {
-            padding-top: 3%;
-        }
-        a:link {
-            color: #000000;
-            text-decoration: underline;
-            text-decoration-color: #000000;
-        }
-        a:visited {
-            color: #000000;
-            text-decoration: underline;
-            text-decoration-color: #000000;
-        }
-        a:hover {
-            color: #000000;
-            text-decoration: underline;
-            text-decoration-color: #ff0000;
-        }
-        .menu {
-            margin: 5px;
-        }
-        .img-container {
-            overflow: hidden;
-            position: relative; /* Without, w and h different? */
-            width: 50vw;
-            height: 50vh;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .img-container img {
-            object-fit: cover;
-            object-position: center;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 50vw;
-            height: auto;
-            opacity: 0;
-            z-index: -1;
-        }
-        .img-container img.next {
-            opacity: 1;
-            z-index: 1;
-        }
-        .img-container img.prev {
-            opacity: 1;
-            z-index: 2;
-        }
-        .img-container img.fade-out {
-            opacity: 0;
-            transition: visibility 0s .5s, opacity .5s linear;
-            visibility: hidden;
-        }
-        .link-icons {
-            text-align: center;
-        }
-        .link-icon {
-            display: inline-block;
-            margin: 10px;
-            max-width: 32px;
-            opacity: 1;
-            transition: opacity 0.5s;
-            -webkit-transition: opacity .5s;
-            -moz-transition: opacity .5s;
-            /*https://stackoverflow.com/questions/24933430/img-src-svg-changing-the-fill-color*/
-            fill: orange;
-            color: #ff0000 !important;
-        }
-        .link-icon path {
-            fill: red;
-        }
-        .link-icon:hover {
-            opacity: 0.5;
-            fill: blue !important;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -100,14 +21,18 @@
     <h2 class="slide-text">Hello, welcome to my page!</h2>
 
     <div class="link-icons">
-        <a href="mailto:davidweisspost@gmail.com"><img class="link-icon" src="svg/icon-mail.svg"></a>
-        <a href="https://github.com/davidweisscode"><img class="link-icon" src="svg/icon-github.svg"></a>
-        <a href="https://www.linkedin.com/in/davidweisslink/"><img class="link-icon" src="svg/icon-linkedin.svg"></a>
-        <a href="https://www.facebook.com/davidweissbook"><img class="link-icon" src="svg/icon-facebook.svg"></a>
-        <a href="https://twitter.com/davidweissnews"><img class="link-icon" src="svg/icon-twitter.svg"></a>
-        <a href="https://www.instagram.com/davidweisspics/"><img class="link-icon" src="svg/icon-instagram.svg"></a>
+        <a href="mailto:davidweisspost@gmail.com"><img src="svg/icon-mail.svg"></a>
+        <a href="https://github.com/davidweisscode"><img src="svg/icon-github.svg"></a>
+        <a href="https://www.linkedin.com/in/davidweisslink/"><img src="svg/icon-linkedin.svg"></a>
+        <a href="https://www.facebook.com/davidweissbook"><img src="svg/icon-facebook.svg"></a>
+        <a href="https://twitter.com/davidweissnews"><img src="svg/icon-twitter.svg"></a>
+        <a href="https://www.instagram.com/davidweisspics/"><img src="svg/icon-instagram.svg"></a>
     </div>
 
-    <p><a class="menu" href="about.html">About</a> <a class="menu" href="index.html">Home</a> <a class="menu" href="projects.html">Projects</a></p>
+    <p class="menu">
+        <a href="about.html">About</a>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+    </p>
 </body>
 </html>
