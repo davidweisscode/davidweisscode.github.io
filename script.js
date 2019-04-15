@@ -10,7 +10,8 @@ class Slideshow {
         shuffleArray(this.slides); // Randomize slide order
         this.slides.each((idx, slide) => {
             $(slide).attr('slide-id', $(slide).attr('id'));
-            $(slide).attr('slide-description', slideDescription[$(slide).attr('id')]);
+            $(slide).attr('slide-description', slideDescriptions[$(slide).attr('id')]);
+            $(slide).attr('slide-link', slideLinks[$(slide).attr('id')]);
         });
         
     }
@@ -58,15 +59,22 @@ class Slideshow {
         this.setNextSlide();
 
         $('.slide-text').text(this.nextSlide.attr('slide-description'));
+        $('.img-container a').attr('href', this.nextSlide.attr('slide-link'));
 
         this.prevSlide.addClass('fade-out');
     }
 }
 
-const slideDescription = [
+const slideDescriptions = [ // In markup order
     "First descr",
     "Second descr",
     "Third descr",
+];
+
+const slideLinks = [ // In markup order
+    "https://davidweisscode.github.io/about.html",
+    "https://davidweisscode.github.io/index.html",
+    "https://davidweisscode.github.io/projects.html",
 ];
 
 function shuffleArray(array) {
