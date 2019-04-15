@@ -5,8 +5,8 @@ class Slideshow {
     }
 
     initSlides() {
-        this.container = $('[data-slideshow]'); // Select every element containing the attribute
-        this.slides = this.container.find('object'); // Get all elements // object instead of object ?
+        this.container = $('[data-slideshow]'); // Select by attribute --> img-container
+        this.slides = this.container.find('img'); // Get all elements
         this.slides.each((idx, slide) => $(slide).attr('data-slide', idx));
     }
 
@@ -15,7 +15,7 @@ class Slideshow {
         this.currentIndex = 0;
         this.setNextSlide();
         this.slides.each((idx, slide) => {
-          $('<object>').on('load', $.proxy(this.loadImage, this)).attr('data', $(slide).attr('data')); // ?
+          $('<img>').on('load', $.proxy(this.loadImage, this)).attr('src', $(slide).attr('src')); // ?
         });
     }
 
@@ -42,7 +42,6 @@ class Slideshow {
             this.prevSlide.removeClass('prev fade-out')
         }
         this.nextSlide.removeClass('next');
-
         this.prevSlide = this.nextSlide;
         this.prevSlide.addClass('prev');
 
