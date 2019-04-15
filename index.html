@@ -72,9 +72,16 @@
             transition: opacity 0.5s;
             -webkit-transition: opacity .5s;
             -moz-transition: opacity .5s;
+            /*https://stackoverflow.com/questions/24933430/img-src-svg-changing-the-fill-color*/
+            fill: orange;
+            color: #ff0000 !important;
+        }
+        .link-icon path {
+            fill: red;
         }
         .link-icon:hover {
             opacity: 0.5;
+            fill: blue !important;
         }
     </style>
 </head>
@@ -84,18 +91,21 @@
 
     <div class="img-container" data-slideshow>
         <a href="home.html">
-        <image id="0" src="drawing-1.svg">
-        <image id="1" src="drawing-2.svg">
-        <image id="2" src="drawing-3.svg">
+        <image id="0" src="svg/drawing-1.svg">
+        <image id="1" src="svg/drawing-2.svg">
+        <image id="2" src="svg/drawing-3.svg">
         </a>
     </div>
     
     <h2 class="slide-text">Hello, welcome to my page!</h2>
 
     <div class="link-icons">
-        <a href="https://github.com/davidweisscode"><img class="link-icon" src="GitHub-Mark-64px.png"></a>
-        <a href="https://github.com/davidweisscode"><img class="link-icon" src="GitHub-Mark-64px.png"></a>
-        <a href="https://github.com/davidweisscode"><img class="link-icon" src="GitHub-Mark-64px.png"></a>
+        <a href="mailto:davidweisspost@gmail.com"><img class="link-icon" src="svg/icon-mail.svg"></a>
+        <a href="https://github.com/davidweisscode"><img class="link-icon" src="svg/icon-github.svg"></a>
+        <a href="https://www.linkedin.com/in/davidweisslink/"><img class="link-icon" src="svg/icon-linkedin.svg"></a>
+        <a href="https://www.facebook.com/davidweissbook"><img class="link-icon" src="svg/icon-facebook.svg"></a>
+        <a href="https://twitter.com/davidweissnews"><img class="link-icon" src="svg/icon-twitter.svg"></a>
+        <a href="https://www.instagram.com/davidweisspics/"><img class="link-icon" src="svg/icon-instagram.svg"></a>
     </div>
 
     <p><a class="menu" href="about.html">About</a> <a class="menu" href="index.html">Home</a> <a class="menu" href="projects.html">Projects</a></p>
