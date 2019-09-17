@@ -6,14 +6,13 @@ class Slideshow {
 
     initSlides() {
         this.container = $('[data-slideshow]'); // Select by attribute --> img-container
-        this.slides = this.container.find('img'); // Get all elements
+        this.slides = this.container.find('img'); // Get all image elements
         shuffleArray(this.slides); // Randomize slide order
         this.slides.each((idx, slide) => {
             $(slide).attr('slide-id', $(slide).attr('id'));
             $(slide).attr('slide-description', slideDescriptions[$(slide).attr('id')]);
             $(slide).attr('slide-link', slideLinks[$(slide).attr('id')]);
         });
-        
     }
 
     initSlideshow() {
@@ -39,11 +38,11 @@ class Slideshow {
 
     playSlideshow() {
         this.slideshow = window.setInterval(() => {
-            this.performSlide()
+            this.showNextSlide()
         }, 1500);
     }
 
-    performSlide() {
+    showNextSlide() {
         if(this.prevSlide) {
             this.prevSlide.removeClass('prev fade-out')
         }
