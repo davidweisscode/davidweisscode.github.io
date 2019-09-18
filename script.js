@@ -9,10 +9,13 @@ class Slideshow {
 
     initSlides(slides) {
         slides.forEach(slide => {
+            let link = document.createElement("a");
+            link.href = slide.link;
             let image = document.createElement("img");
             image.src = slide.image;
             image.id = slide.id;
-            $(".slideshow").append(image);
+            $(".slideshow").append(link);
+            $(".slideshow a:last-child").append(image);
             $(".slideshow img:last-child").on('load', $.proxy(this.finishLoadingImage, this));
         });
     }
@@ -55,17 +58,18 @@ class Slideshow {
         $("#" + this.next).addClass('next');
 
         $('.slideheader').text(this.slides[this.current - 1].header);
-        // TODO: Internal link from image to project view
     }
 }
 
-function shuffleArray(array) {
+// TODO: Random slideshow order with fixed starter slide
+async function shuffleArray(array) {
     for (var i = array.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
         var temp = array[i];
         array[i] = array[j];
         array[j] = temp;
     }
+    return array;
 }
 
 $(document).ready(function() {
