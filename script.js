@@ -44,7 +44,6 @@ class Slideshow {
         if(this.current > this.slides.length) {
             this.current = 1;
         }
-
         $("#" + this.prev).removeClass('prev fade-out');
         $("#" + this.next).removeClass('next');
 
@@ -55,8 +54,8 @@ class Slideshow {
         this.next = this.current;
         $("#" + this.next).addClass('next');
 
-        // $('.slideheader').text(this.nextSlideID.attr('slide-description'));
-        // $('.img-container a').attr('href', this.nextSlideID.attr('slide-link'));
+        $('.slideheader').text(this.slides[this.current - 1].header);
+        // TODO: Internal link from image to project view
     }
 }
 
