@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="http://livejs.com/live.js"></script>
+    <title>Document</title>
+    <style>
+        * { background-color: rgba(255,0,0,.2); }
+        * * { background-color: rgba(0,255,0,.2); }
+        * * * { background-color: rgba(0,0,255,.2); }
+        * * * * { background-color: rgba(255,0,255,.2); }
+        * * * * * { background-color: rgba(0,255,255,.2); }
+        * * * * * * { background-color: rgba(255,255,0,.2); }
+        * * * * * * * { background-color: rgba(255,0,0,.2); }
+        * * * * * * * * { background-color: rgba(0,255,0,.2); }
+        * * * * * * * * * { background-color: rgba(0,0,255,.2); }
+        .container {  
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 50px 350px 100px;
+        }
+        header {
+            grid-column: span 3;
+            text-align: center;
+        }
+        .left {
+            grid-column: span 1;
+            text-align: center;
+        }
+        .mid {
+            grid-column: span 1;
+            text-align: center;
+        }
+        .right {
+            grid-column: span 1;
+            text-align: center;
+        }
+        footer {  
+            grid-column: span 3;
+            text-align: center;
+        }
+        footer img {
+            display: inline-block;
+            margin: 10px;
+            max-width: 32px;
+        }
+        aside {
+            text-align: center;
+        }
+        aside img {
+            width:60%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>HEADER</header>
+        <div class="left">
+            <ul>
+                <li>First</li>
+                <li>Second</li>
+                <li>Third</li>
+            </ul>
+        </div>
+        <div class="mid">
+            <img src="svg/drawing-1.svg">
+        </div>
+        <div class="right">
+            <h1>
+                This is a headline.
+            </h1>
+            <p>Here comes some nice text inside of a paragraph.</p>
+        </div>
+        <footer>
+            <div id="icons">
+                <img src="svg/icon-mail.svg">
+                <img src="svg/icon-mail.svg">
+                <img src="svg/icon-mail.svg">
+            </div>
+            <div id="menu">
+                <a href="about.html">About</a>
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+            </div>
+        </footer>  
+    </div>
+</body>
+</html>
