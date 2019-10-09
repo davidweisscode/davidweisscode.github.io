@@ -1,10 +1,64 @@
-h1, h2, h3, h4, p {
+/* * { background-color: rgba(255,0,0,.2); }
+* * { background-color: rgba(0,255,0,.2); }
+* * * { background-color: rgba(0,0,255,.2); }
+* * * * { background-color: rgba(255,0,255,.2); }
+* * * * * { background-color: rgba(0,255,255,.2); }
+* * * * * * { background-color: rgba(255,255,0,.2); }
+* * * * * * * { background-color: rgba(255,0,0,.2); }
+* * * * * * * * { background-color: rgba(0,255,0,.2); }
+* * * * * * * * * { background-color: rgba(0,0,255,.2); } */
+.gridcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 6fr 1fr;
+}
+header {
+    grid-column: span 3;
+    text-align: center;
+    align-items: center; /* Header not vertically aligned? */
+    margin-top: 25px;
+}
+.left {
+    margin: 5px;
+    grid-column: span 1;
     text-align: center;
 }
+.mid {
+    margin: 5px;
+    grid-column: span 1;
+    text-align: center;
+    position: relative; /* How is this working? */
+    width: 50vw; /* 16 : 9 ratio */
+    height: 28vh;
+}
+.right {
+    margin: 5px;
+    grid-column: span 1;
+    text-align: left;
+}
+footer {
+    grid-column: span 3;
+    text-align: center;
+}
+footer img {
+    display: inline-block;
+    margin: 10px;
+    max-width: 32px;
+}
+* {
+    font-family: 'Manuale', sans-serif;
+    font-size: 12pt;
+}
 h1 {
-    margin-top: 3%;
-    margin-bottom: 0%;
-    font-size: 30pt;
+    font-size: 16pt;
+    text-align: center;
+}
+.right h1 {
+    text-align: left;
+    margin: 0px;
+}
+.slideheader {
+    margin-top: 5%;
 }
 a:link {
     color: #000000;
@@ -21,19 +75,17 @@ a:hover {
     text-decoration: underline;
     text-decoration-color: #ff0000;
 }
-.menu {
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-.menu a {
-    margin-left: 5px;
-    margin-right: 5px;
+.mid img {
+    object-fit: cover;
+    left: 0;
+    width: 50vw;
+    height: 28vh;
 }
 .slideshow {
     overflow: hidden;
-    position: relative; /* Without, w and h different? */
-    width: 50vw;
-    height: 50vh;
+    position: relative; /* How is this working? */
+    width: 50vw; /* 16 : 9 ratio */
+    height: 28vh;
     margin-left: auto;
     margin-right: auto;
 }
@@ -42,11 +94,9 @@ a:hover {
     object-position: center;
     position: absolute;
     margin: auto;
-    top: 0;
-    bottom: 0;
     left: 0;
     width: 50vw;
-    height: auto;
+    height: 28vh;
     opacity: 0;
     z-index: -1;
 }
@@ -77,14 +127,22 @@ a:hover {
     -webkit-transition: opacity .5s;
     -moz-transition: opacity .5s;
     /*https://stackoverflow.com/questions/24933430/img-src-svg-changing-the-fill-color*/
-    fill: orange;
-    color: #ff0000 !important;
+    /*fill: orange;
+    color: #ff0000 !important;*/
 }
 .link-icons img:hover {
     opacity: 0.5;
-    fill: blue !important;
+    /*fill: blue !important;*/
 }
-* {
-    font-family: 'Manuale', sans-serif;
-    font-size: 15pt;
+.menu a {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+ul {
+    margin: 0px;
+    list-style: none;
+}
+li {
+    margin-bottom: 5px;
+    text-align: right;
 }
