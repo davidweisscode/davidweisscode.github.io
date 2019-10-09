@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>David Weiß Home</title>
-    <noscript>Your browser does not support JavaScript.</noscript>
+    <title>David Weiß - Home</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <noscript>Your browser does not support JavaScript.</noscript>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="script.js" type="module"></script>
-    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="live.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <h1>David Weiß</h1>
+    <div class="gridcontainer">
+        <header><h1>David Weiß</h1></header>
 
-    <div class="slideshow">
+        <div class="left"></div>
+
+        <div class="mid">
+            <div class="slideshow"></div>
+            <!--TODO: Transition effect?-->
+            <h1 class="slideheader">Hello, welcome to my page!</h1>
+        </div>
+
+        <div class="right"></div>
+
+        <footer>
+            <div class="link-icons">
+                <a href="mailto:davidweisspost@gmail.com"><img src="svg/icon-mail.svg"></a>
+                <a href="https://github.com/davidweisscode"><img src="svg/icon-github.svg"></a>
+                <a href="https://www.linkedin.com/in/davidweisslink/"><img src="svg/icon-linkedin.svg"></a>
+                <a href="https://www.facebook.com/davidweissbook"><img src="svg/icon-facebook.svg"></a>
+                <a href="https://twitter.com/davidweissnews"><img src="svg/icon-twitter.svg"></a>
+                <a href="https://www.instagram.com/davidweisspics/"><img src="svg/icon-instagram.svg"></a>
+            </div>
+            <div class="menu">
+                <a href="about.html">About</a>
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+            </div>
+        </footer>
     </div>
-    
-    <h2 class="slideheader">Hello, welcome to my page!</h2><!--TODO: Transition effect?-->
-
-    <div class="link-icons">
-        <a href="mailto:davidweisspost@gmail.com"><img src="svg/icon-mail.svg"></a>
-        <a href="https://github.com/davidweisscode"><img src="svg/icon-github.svg"></a>
-        <a href="https://www.linkedin.com/in/davidweisslink/"><img src="svg/icon-linkedin.svg"></a>
-        <a href="https://www.facebook.com/davidweissbook"><img src="svg/icon-facebook.svg"></a>
-        <a href="https://twitter.com/davidweissnews"><img src="svg/icon-twitter.svg"></a>
-        <a href="https://www.instagram.com/davidweisspics/"><img src="svg/icon-instagram.svg"></a>
-    </div>
-
-    <p class="menu">
-        <a href="about.html">About</a>
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-    </p>
-    <!-- Responsive: https://stackoverflow.com/questions/31217304/change-website-design-for-mobile-devices-or-browser-resize-->
 </body>
 </html>

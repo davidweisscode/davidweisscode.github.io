@@ -1,30 +1,56 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>David Weiß Projects</title>
+    <title>David Weiß - Projects</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <noscript>Your browser does not support JavaScript.</noscript>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+    <script src="projects.js" type="module"></script>
+    <script type="text/javascript" src="live.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <h1>David Weiß</h1>
+    <div class="gridcontainer">
+        <header><h1>Projects</h1></header>
 
-    <p>This will be a Projects page.</p>
+        <div class="left">
+            <ul>
+                <li><a href="#1">First</a></li>
+                <li><a href="#2">Second</a></li>
+                <li><a href="#3">Third</a></li>
+            </ul>
+        </div>
 
-    <div class="link-icons">
-        <a href="mailto:davidweisspost@gmail.com"><img src="svg/icon-mail.svg"></a>
-        <a href="https://github.com/davidweisscode"><img src="svg/icon-github.svg"></a>
-        <a href="https://www.linkedin.com/in/davidweisslink/"><img src="svg/icon-linkedin.svg"></a>
-        <a href="https://www.facebook.com/davidweissbook"><img src="svg/icon-facebook.svg"></a>
-        <a href="https://twitter.com/davidweissnews"><img src="svg/icon-twitter.svg"></a>
-        <a href="https://www.instagram.com/davidweisspics/"><img src="svg/icon-instagram.svg"></a>
+        <div class="mid">
+            <img src="svg/drawing-1.svg">
+            <h1 class="slideheader">Hello, welcome to my page!</h1>
+        </div>
+
+        <div class="right">
+            <h1>
+                This is a headliner.
+            </h1>
+            <p>Here comes some nice text inside of a paragraph.</p>
+        </div>
+
+        <footer>
+            <div class="link-icons">
+                <a href="mailto:davidweisspost@gmail.com"><img src="svg/icon-mail.svg"></a>
+                <a href="https://github.com/davidweisscode"><img src="svg/icon-github.svg"></a>
+                <a href="https://www.linkedin.com/in/davidweisslink/"><img src="svg/icon-linkedin.svg"></a>
+                <a href="https://www.facebook.com/davidweissbook"><img src="svg/icon-facebook.svg"></a>
+                <a href="https://twitter.com/davidweissnews"><img src="svg/icon-twitter.svg"></a>
+                <a href="https://www.instagram.com/davidweisspics/"><img src="svg/icon-instagram.svg"></a>
+            </div>
+            <div class="menu">
+                <a href="about.html">About</a>
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+            </div>
+        </footer>
     </div>
-
-    <p class="menu">
-        <a href="about.html">About</a>
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-    </p>
 </body>
 </html>
