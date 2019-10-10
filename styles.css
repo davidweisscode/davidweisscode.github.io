@@ -10,31 +10,29 @@
 .gridcontainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 6fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
 }
 header {
     grid-column: span 3;
-    text-align: center;
-    align-items: center; /* Header not vertically aligned? */
-    margin-top: 25px;
+    /* align-items: center; TODO: Header not vertically aligned? */
+    padding-top: 2%;
 }
 .left {
-    margin: 5px;
     grid-column: span 1;
-    text-align: center;
+    margin: 5px;
+    margin-left: auto;
+    width: 15vw;
 }
 .mid {
-    margin: 5px;
     grid-column: span 1;
-    text-align: center;
-    position: relative; /* How is this working? */
-    width: 50vw; /* 16 : 9 ratio */
-    height: 28vh;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .right {
     margin: 5px;
     grid-column: span 1;
-    text-align: left;
+    width: 15vw;
 }
 footer {
     grid-column: span 3;
@@ -43,7 +41,6 @@ footer {
 footer img {
     display: inline-block;
     margin: 10px;
-    max-width: 32px;
 }
 * {
     font-family: 'Manuale', sans-serif;
@@ -52,10 +49,13 @@ footer img {
 h1 {
     font-size: 16pt;
     text-align: center;
+    margin: 0px;
 }
 .right h1 {
     text-align: left;
-    margin: 0px;
+}
+.right p {
+    text-align: justify;
 }
 .slideheader {
     margin-top: 5%;
@@ -78,25 +78,26 @@ a:hover {
 .mid img {
     object-fit: cover;
     left: 0;
-    width: 50vw;
-    height: 28vh;
+    width: 30vw;
+    height: 30vh;
 }
 .slideshow {
-    overflow: hidden;
     position: relative; /* How is this working? */
-    width: 50vw; /* 16 : 9 ratio */
-    height: 28vh;
-    margin-left: auto;
+    width: 30vw;
+    height: 30vh;
+    /* overflow: hidden; */
+    /* margin-left: auto;
     margin-right: auto;
+    text-align: center; */
 }
 .slideshow img {
+    position: absolute; /* How is this working? */
     object-fit: cover;
-    object-position: center;
-    position: absolute;
-    margin: auto;
+    /* object-position: center; */
+    /* margin: auto; */
     left: 0;
-    width: 50vw;
-    height: 28vh;
+    width: 30vw;
+    height: 30vh;
     opacity: 0;
     z-index: -1;
 }
