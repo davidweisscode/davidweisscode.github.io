@@ -10,7 +10,7 @@
 .gridcontainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 9fr 1fr;
+    grid-template-rows: 1fr 8fr 1fr;
 }
 header {
     grid-column: span 3;
@@ -21,6 +21,7 @@ header {
     grid-column: span 1;
     margin: 5px;
     margin-left: auto;
+    margin-right: 15px;
     width: 15vw;
 }
 .mid {
@@ -45,10 +46,10 @@ footer img {
 }
 * {
     font-family: 'Manuale', sans-serif;
-    font-size: 12pt;
+    font-size: 14pt;
 }
 h1 {
-    font-size: 16pt;
+    font-size: 20pt;
     text-align: center;
     margin: 0px;
 }
@@ -73,12 +74,11 @@ a:hover {
 .mid img {
     object-fit: cover;
     left: 0;
-    width: 30vw;
-    height: 30vh;
+    width: 40vw;
+    height: 40vh;
 }
 .mid p {
-    width: 30vw;
-    height: 30vh;
+    width: 40vw;
     text-align: justify;
     margin-left: auto; /* Difference to text-align: center;? */
     margin-right: auto;
@@ -88,8 +88,8 @@ a:hover {
 }
 .slideshow {
     position: relative; /* How is this working? */
-    width: 30vw;
-    height: 30vh;
+    width: 40vw;
+    height: 40vh;
     margin-left: auto; /* Difference to text-align: center;? */
     margin-right: auto;
     /* overflow: hidden;
@@ -101,8 +101,8 @@ a:hover {
     /* object-position: center; */
     /* margin: auto; */
     left: 0;
-    width: 30vw;
-    height: 30vh;
+    width: 40vw;
+    height: 40vh;
     opacity: 0;
     z-index: -1;
 }
