@@ -10,7 +10,7 @@
 .gridcontainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 9fr 1fr;
 }
 header {
     grid-column: span 3;
@@ -55,12 +55,6 @@ h1 {
 .right h1 {
     text-align: left;
 }
-.right p {
-    text-align: justify;
-}
-.slideheader {
-    margin-top: 5%;
-}
 a:link {
     color: #000000;
     text-decoration: underline;
@@ -81,6 +75,16 @@ a:hover {
     left: 0;
     width: 30vw;
     height: 30vh;
+}
+.mid p {
+    width: 30vw;
+    height: 30vh;
+    text-align: justify;
+    margin-left: auto; /* Difference to text-align: center;? */
+    margin-right: auto;
+}
+.slideheader {
+    margin-top: 3%;
 }
 .slideshow {
     position: relative; /* How is this working? */

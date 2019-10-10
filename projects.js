@@ -16,7 +16,7 @@ function showContent() {
     } else {
         currentProjectId = location.hash.slice(1);
     }
-    $(".right h1").html(slides[currentProjectId - 1].header);
-    $(".right p").html(slides[currentProjectId - 1].description);
     $(".mid img").attr("src", slides[currentProjectId - 1].image);
+    $(".mid h1").html(slides[currentProjectId - 1].header);
+    $(".mid p").html(slides[currentProjectId - 1].description);
 }
