@@ -28,6 +28,7 @@ header {
     margin: 5px;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 .right {
     margin: 5px;
@@ -85,9 +86,9 @@ a:hover {
     position: relative; /* How is this working? */
     width: 30vw;
     height: 30vh;
-    /* overflow: hidden; */
-    /* margin-left: auto;
+    margin-left: auto; /* Difference to text-align: center;? */
     margin-right: auto;
+    /* overflow: hidden;
     text-align: center; */
 }
 .slideshow img {
