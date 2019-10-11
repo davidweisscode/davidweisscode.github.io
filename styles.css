@@ -9,13 +9,10 @@
 * * * * * * * * * { background-color: rgba(0,0,255,.2); } */
 .gridcontainer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-columns: auto 40vw auto;
 }
 header {
     grid-column: span 3;
-    /* align-items: center; TODO: Header not vertically aligned? */
-    padding-top: 2%;
 }
 .left {
     grid-column: span 1;
@@ -32,8 +29,9 @@ header {
     text-align: center;
 }
 .right {
-    margin: 5px;
     grid-column: span 1;
+    margin: 5px;
+    margin-left: 15px;
     width: 15vw;
 }
 footer {
@@ -46,10 +44,15 @@ footer img {
 }
 * {
     font-family: 'Manuale', sans-serif;
-    font-size: 14pt;
+    font-size: 12pt;
 }
 h1 {
-    font-size: 20pt;
+    font-size: 16pt;
+    text-align: center;
+    margin: 0px;
+    margin-top: 15px;
+}
+h2 {
     text-align: center;
     margin: 0px;
 }
@@ -79,21 +82,23 @@ a:hover {
 }
 .mid p {
     width: 40vw;
+    height: 30vh;
     text-align: justify;
-    margin-left: auto; /* Difference to text-align: center;? */
+    margin-left: auto;
     margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 0px;
 }
 .slideheader {
     margin-top: 3%;
 }
 .slideshow {
     position: relative; /* How is this working? */
-    width: 40vw;
+    width: 40vw; /* Why not 100% here? Occupy 100% of mid, which is 40vw. */
     height: 40vh;
-    margin-left: auto; /* Difference to text-align: center;? */
+    margin-left: auto;
     margin-right: auto;
-    /* overflow: hidden;
-    text-align: center; */
+    overflow: hidden; /* How is this working? */
 }
 .slideshow img {
     position: absolute; /* How is this working? */
