@@ -16,22 +16,22 @@ header {
 }
 .left {
     grid-column: span 1;
-    margin: 5px;
+    margin: 0.5vw;
     margin-left: auto;
-    margin-right: 15px;
+    margin-right: 0.5vw;
     width: 15vw;
 }
 .mid {
     grid-column: span 1;
-    margin: 5px;
+    margin: 0.5vw;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
 .right {
     grid-column: span 1;
-    margin: 5px;
-    margin-left: 15px;
+    margin: 0.5vw;
+    margin-left: 0.5vw;
     width: 15vw;
 }
 footer {
@@ -40,21 +40,21 @@ footer {
 }
 footer img {
     display: inline-block;
-    margin: 10px;
 }
 * {
     font-family: 'Manuale', sans-serif;
-    font-size: 12pt;
+    font-size: 1.2vw;
 }
 h1 {
-    font-size: 16pt;
-    text-align: center;
     margin: 0px;
-    margin-top: 15px;
+    margin-top: 1vh;
+    text-align: center;
+    font-size: 2vw;
 }
 h2 {
-    text-align: center;
     margin: 0px;
+    text-align: center;
+    font-size: 1.5vw;
 }
 .right h1 {
     text-align: left;
@@ -82,15 +82,15 @@ a:hover {
 }
 .mid p {
     width: 40vw;
-    height: 30vh;
+    height: 25vh;
     text-align: justify;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5px;
+    margin-top: 1vh;
     margin-bottom: 0px;
 }
 .slideheader {
-    margin-top: 3%;
+    margin-top: 1vh;
 }
 .slideshow {
     position: relative; /* How is this working? */
@@ -131,8 +131,8 @@ a:hover {
 }
 .link-icons img {
     display: inline-block;
-    margin: 10px;
-    max-width: 32px;
+    margin: 0.8vw;
+    max-width: 2vw;
     opacity: 1;
     transition: opacity 0.5s;
     -webkit-transition: opacity .5s;
@@ -154,6 +154,6 @@ ul {
     list-style: none;
 }
 li {
-    margin-bottom: 5px;
+    margin-bottom: 1vh;
     text-align: right;
 }
