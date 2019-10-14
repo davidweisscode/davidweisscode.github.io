@@ -18,7 +18,7 @@ header {
     grid-column: span 1;
     margin: 0.5vw;
     margin-left: auto;
-    margin-right: 0.5vw;
+    margin-right: 1vw;
     width: 15vw;
 }
 .mid {
@@ -75,6 +75,7 @@ a:hover {
     text-decoration-color: #ff0000;
 }
 .mid img {
+    display: block;
     object-fit: cover;
     left: 0;
     width: 40vw;
@@ -93,18 +94,17 @@ a:hover {
     margin-top: 1vh;
 }
 .slideshow {
-    position: relative; /* How is this working? */
-    width: 40vw; /* Why not 100% here? Occupy 100% of mid, which is 40vw. */
+    position: relative;
+    width: 40vw; /* Why not 100%? Occupy 100% of mid (Which is not 40vw) */
     height: 40vh;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden; /* How is this working? */
 }
 .slideshow img {
-    position: absolute; /* How is this working? */
+    position: absolute; /* Absolute to its relative parent */
     object-fit: cover;
-    /* object-position: center; */
-    /* margin: auto; */
+    top: 0;
     left: 0;
     width: 40vw;
     height: 40vh;
