@@ -6,7 +6,7 @@
   --bordercl:navy;
   --callouctcolor:dodgerblue;
   --hovercolor:navy;
-  --darkMaincolor: #50fa7b;
+  --darkMaincolor: navy;
   --space-1: 5rem;
 }
 html,
@@ -87,9 +87,10 @@ ul li::before {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  max-width: 100%;
-  margin-top: 1rem;
+  justify-content: left;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
 }
 .intro img {
   display: block;
@@ -133,16 +134,14 @@ figure h4 {
 figure h4::before {
   content: '↳ ';
 }
-/* Containers */
 .content {
   margin-bottom: 4em;
+  padding: 0 1ch;
+  word-wrap: break-word;
   margin-left: auto;
   margin-right: auto;
   max-width: 800px;
-  padding: 0 1ch;
-  word-wrap: break-word;
 }
-/* Header */
 header {
   display: flex;
   flex-wrap: wrap;
@@ -155,7 +154,6 @@ header {
 header .main {
   font-size: 1.5rem;
 }
-/* Footer */
 footer {
   margin-top: 2em;
   margin-left: auto;
@@ -222,6 +220,9 @@ svg{
 }
 .link-icons a:hover {
     background-color: initial;
+}
+.hide {
+  display: none;
 }
 @media (min-width: 40rem) {
   .intro {
