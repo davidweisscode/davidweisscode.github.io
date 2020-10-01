@@ -1,52 +1,30 @@
-/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&display=swap');
-/* Markdown */
-:root{
-  --maincolor: navy;
-  --bordercl:navy;
-  --callouctcolor:dodgerblue;
-  --hovercolor:navy;
-  --darkMaincolor: navy;
-  --space-1: 5rem;
-}
-html,
-body,
-p,
-blockquote,
-cite,
-h1,
-h2,
-h3 {
-  margin: 0;
-  padding: 0;
+:root {
+  --text-color: #202124;
+  --background-color: white;
+  --accent-color: rgb(70, 70, 140);
 }
 html {
-  color: #232333;
   font-family: 'Roboto Mono', monospace;
   font-size: 16px;
-  line-height: 1.6em;
-}
-body{
-  display: block;
-  margin: 8px;
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 * {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 ::selection {
-  background: var(--maincolor);
-  color: #fff;
+  background: var(--accent-color);
+  color: white;
 }
-h2, h3, h4, h5, h6 {
-  font-size: 1.2rem;
-  margin-top: 2em;
-}
-h2::before { content: '# '; color: var(--maincolor); }
-h3::before { content: '## '; color: var(--maincolor); }
-h4::before { content: '### '; color: var(--maincolor); }
 h1 {
   font-size: 2rem;
-  margin-bottom: 0.25em;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h2::before {
+  content: '# '; color: var(--accent-color);
 }
 p {
   font-family: 'IBM Plex Sans', sans-serif;
@@ -54,23 +32,15 @@ p {
 }
 hr {
   border: 0;
-  border-top: 3px dotted var(--bordercl);
-  margin: 1em 0;
-}
-blockquote {
-  border-left: 3px solid var(--bordercl);
-  color: #737373;
-  margin: 0;
-  padding-left: 1em;
+  border-top: 4px dotted var(--text-color);
 }
 a {
-  border-bottom: 3px solid var(--maincolor);
-  color: inherit;
+  border-bottom: 3px solid var(--accent-color);
   text-decoration: none;
+  color: inherit;
 }
 a:hover {
-    background-color: var(--hovercolor);
-    color: #fff;
+  text-shadow: 0px 0px 25px var(--text-color);
 }
 ul {
   list-style: none;
@@ -83,204 +53,78 @@ ul li::before {
   content: '* ';
   font-weight: bold;
 }
-.intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: left;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0;
-}
-.intro img {
-  display: block;
-  max-width: 20rem;
-}
-.intro div {
-  max-width: 20rem;
-  flex-shrink: 0;
-}
-.intro div h1 {
-  margin-top: 1rem;
-}
-.intro div p {
-  margin-top: 1rem;
-}
-/* Images */
-img {
-  height: auto;
-  max-width: 100%;
-  border-radius: 0.25rem;
-}
-figure {
-  box-sizing: border-box;
-  display: inline-block;
-  margin: 0;
-  max-width: 100%;
-}
-figure img {
-  max-height: 500px;
-}
-@media screen and (min-width: 600px) {
-  figure {
-    padding: 0 40px;
-  }
-}
-figure h4 {
-  font-size: 1rem;
-  margin: 0;
-  margin-bottom: 1em;
-}
-figure h4::before {
-  content: '↳ ';
-}
 .content {
-  margin-bottom: 4em;
-  padding: 0 1ch;
-  word-wrap: break-word;
   margin-left: auto;
   margin-right: auto;
-  max-width: 800px;
+  max-width: 95%;
 }
 header {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 1rem;
   justify-content: space-between;
-  margin: 1em 0;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 800px;
+  align-items: baseline;
 }
-header .main {
-  font-size: 1.5rem;
+header > * {
+  margin-top: 0.2rem;
+}
+header .title {
+  font-size: 1.3rem;
+  margin-right: 1.5rem;
 }
 footer {
-  margin-top: 2em;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 800px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
-/* Common */
-.title h1 {
-  margin-bottom: 0;
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: left;
+  margin: auto;
 }
-time {
-  color: grey;
+.intro img {
+  display: block;
+  width: 100%;
 }
-/* Posts */
-article .title {
-  margin-bottom: 1em;
+img {
+  border-radius: 0.25rem;
 }
-/* Callout */
-.callout {
-  background-color: var(--callouctcolor);
-  color: #fff;
-  padding: 1em;
-}
-.callout p {
-  font-family: 'IBM Plex Mono', monospace;
-  margin: 0;
-}
-.callout a {
-  border-bottom: 3px solid #fff;
-}
-.callout a:hover {
-  background-color: #fff;
-  color: var(--callouctcolor);
-}
-.site-description {
-display: flex;
-justify-content: space-between;
-}
-svg{
+svg {
   max-height: 15px;
 }
-.soc:hover{
-  color: white;
-}
-.link-icons img {
+.network-icons a {
   display: inline-block;
-  margin-right: 10px;
-  margin-top: 10px;
-  max-width: 25px;
-  opacity: 1;
-  transition: opacity 0.5s;
-  -webkit-transition: opacity .5s;
-  -moz-transition: opacity .5s;
-  /*https://stackoverflow.com/questions/24933430/img-src-svg-changing-the-fill-color*/
-  /*fill: orange;
-  color: #ff0000 !important;*/
-}
-.link-icons img:hover {
-  opacity: 0.5;
-  /*fill: blue !important;*/
-}
-.link-icons a {
+  margin-right: 0.5rem;
+  max-width: 1.5rem;
   border-bottom: initial;
+  opacity: 0.7;
 }
-.link-icons a:hover {
-    background-color: initial;
+.network-icons a:hover {
+  opacity: 1;
 }
-.hide {
-  display: none;
-}
+/* Landscape layout */
 @media (min-width: 40rem) {
+  .content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 40rem;
+  }
   .intro {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    max-width: 100%;
     margin-top: 3rem;
-    padding: 0 var(--space-1);
+    margin-bottom: 3rem;
   }
-
   .intro img {
     display: block;
-    max-width: 16rem;
+    max-width: 17rem;
   }
-
   .intro div {
-    margin-left: 2.25rem;
-    max-width: 20rem;
+    margin-left: 2rem;
+    max-width: 21rem;
     flex-shrink: 0;
-  }
-
-  .intro div h1 {
-    margin-top: 0;
-  }
-
-  .book-cover {
-    float: right;
-    margin: 0 0 1rem 1rem;
-  }
-
-  .in-list .book-cover {
-    max-height: 8.25rem;
-    max-width: 8.25rem;
-    display: block;
-  }
-
-  img.about-me {
-    display: block;
-    width: 18rem;
-    height: 18rem;
-    float: right;
-    margin: -10rem -6rem var(--space-1) var(--space-1);
-    border-radius: 50%;
-    shape-outside: circle(-9rem);
-  }
-  .link-icons img {
-    display: inline-block;
-    margin-right: 10px;
-    margin-top: 10px;
-    max-width: 25px;
-    opacity: 1;
-    transition: opacity 0.5s;
-    -webkit-transition: opacity .5s;
-    -moz-transition: opacity .5s;
-    /*https://stackoverflow.com/questions/24933430/img-src-svg-changing-the-fill-color*/
-    /*fill: orange;
-    color: #ff0000 !important;*/
   }
 }

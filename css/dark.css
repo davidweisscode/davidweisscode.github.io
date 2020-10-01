@@ -1,55 +1,27 @@
-body {
-  color: white;
-  background-color: #202124;
+:root {
+  --text-color: white;
+  --background-color: #202124;
+  --accent-color: rgb(150, 190, 215);
 }
-::-moz-selection {
-  background: blue;
-  color: #fff;
+html {
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
-::selection {
-  background: navy;
-  color: #fff;
-}
-hr {
-  border-top: 3px dotted white;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #ddd;
-}
-h2::before { content: '# '; color: var(--darkMaincolor); }
-h3::before { content: '## '; color: var(--darkMaincolor); }
-h4::before { content: '### '; color: var(--darkMaincolor); }
 a {
-  border-bottom: 3px solid var(--darkMaincolor);
-  color: inherit;
+  border-bottom: 3px solid var(--accent-color);
 }
 a:hover {
-  background-color: initial;
-  color: white;
-  text-shadow: 0px 0px 25px rgb(209, 209, 209);
+  text-shadow: 0px 0px 25px var(--text-color);
 }
-.site-description a {
-  color: #ddd;
+hr {
+  border-top: 4px dotted var(--text-color);
 }
-.site-description a:hover {
-  color: black;
+::-moz-selection {
+  background: var(--accent-color);
 }
-.site-title a {
-  color: white;
-  text-decoration: none !important;
+::selection {
+  background: var(--accent-color);
 }
-.header nav,
-.footer {
-  border-color: #333;
-}
-.highlight {
-  background-color: #333;
-}
-.soc:hover {
-  color: white;
-}
+h2::before { content: '# '; color: var(--accent-color); }
+h3::before { content: '## '; color: var(--accent-color); }
+h4::before { content: '### '; color: var(--accent-color); }
