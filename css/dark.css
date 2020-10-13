@@ -22,6 +22,4 @@ hr {
 ::selection {
   background: var(--accent-color);
 }
-h2::before { content: '# '; color: var(--accent-color); }
-h3::before { content: '## '; color: var(--accent-color); }
-h4::before { content: '### '; color: var(--accent-color); }
+h2::before, h3::before { content: '# '; color: var(--accent-color); }

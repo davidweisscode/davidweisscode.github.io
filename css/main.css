@@ -17,13 +17,20 @@ html {
   background: var(--accent-color);
   color: white;
 }
+::-moz-selection {
+  background: var(--accent-color);
+  color: white;
+}
 h1 {
   font-size: 2rem;
 }
 h2 {
   font-size: 1.5rem;
 }
-h2::before {
+h3 {
+  font-size: 1.2rem;
+}
+h2::before, h3::before {
   content: '# '; color: var(--accent-color);
 }
 p {
@@ -48,6 +55,7 @@ ul {
 }
 ul li {
   text-indent: -2ch;
+  padding-bottom: 0.5rem;
 }
 ul li::before {
   content: '* ';
@@ -56,7 +64,7 @@ ul li::before {
 .content {
   margin-left: auto;
   margin-right: auto;
-  max-width: 95%;
+  max-width: 90%;
 }
 header {
   display: flex;
@@ -66,7 +74,7 @@ header {
   align-items: baseline;
 }
 header > * {
-  margin-top: 0.2rem;
+  margin-top: 0.9rem;
 }
 header .title {
   font-size: 1.3rem;
@@ -75,6 +83,9 @@ header .title {
 footer {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+footer svg {
+  max-height: 1rem;
 }
 .intro {
   display: flex;
@@ -90,18 +101,21 @@ footer {
 img {
   border-radius: 0.25rem;
 }
-svg {
-  max-height: 15px;
-}
 .network-icons a {
   display: inline-block;
   margin-right: 0.5rem;
   max-width: 1.5rem;
   border-bottom: initial;
-  opacity: 0.7;
+  opacity: 1;
 }
 .network-icons a:hover {
-  opacity: 1;
+  opacity: 0.7;
+}
+.network-icons svg {
+  width: 1.5rem;
+}
+.network-icons svg path {
+  fill: var(--text-color);
 }
 /* Landscape layout */
 @media (min-width: 40rem) {
