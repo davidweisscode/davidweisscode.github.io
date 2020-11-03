@@ -29,6 +29,7 @@ h2 {
 }
 h3 {
   font-size: 1.2rem;
+  margin-top: 3rem;
 }
 h2::before, h3::before {
   content: '# '; color: var(--accent-color);
@@ -81,8 +82,8 @@ header .title {
   margin-right: 1.5rem;
 }
 footer {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
 }
 footer svg {
   max-height: 1rem;
