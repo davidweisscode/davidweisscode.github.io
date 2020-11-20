@@ -121,7 +121,7 @@ img {
 /* Landscape layout */
 @media (min-width: 40rem) {
   html {
-    font-size: 20px;
+    font-size: 18px;
   }
   .content {
     margin-left: auto;
